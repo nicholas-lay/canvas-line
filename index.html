@@ -55,7 +55,8 @@
                     if (painting === true) {
                         //画直线
                         drawLine(last[0], last[1], e.clientX, e.clientY);
-                        last = [(e.clientX, e.clientY)];
+
+                        last = [e.clientX, e.clientY];
                     }
                 };
 
