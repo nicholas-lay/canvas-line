@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas {
+    display: block;
+}
+/* 移动端画线时，页面滑动解决方案*/
+body {
+    overflow: hidden;
+}
