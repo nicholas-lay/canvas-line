@@ -2,7 +2,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>画板</title>
         <link rel="stylesheet" href="style.css" />
@@ -14,6 +14,7 @@
             let canvas = document.getElementById("canvas");
             canvas.width = document.documentElement.clientWidth; //canvas宽度变文档宽度
             canvas.height = document.documentElement.clientHeight;
+
             let ctx = canvas.getContext("2d");
 
             ctx.fillStyle = "black";
@@ -27,6 +28,10 @@
                 ctx.lineTo(x2, y2);
                 ctx.stroke();
             }
+            function addMeta() {
+                $("head").append('<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />');
+            }
+            setTimeout(addMeta, 3000);
 
             let painting = false;
             let last;
